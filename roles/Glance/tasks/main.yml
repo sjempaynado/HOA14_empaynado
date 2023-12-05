@@ -1,0 +1,11 @@
+  - name: Install the Glance
+    apt:
+      name: glance
+      state: present
+      update_cache: yes
+
+  - name: Start the Glance
+    service:
+       name: glance-api
+       state: restarted
+       enabled: yes
